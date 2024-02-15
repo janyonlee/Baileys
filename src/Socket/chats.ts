@@ -983,6 +983,7 @@ export const makeChatsSocket = (config: SocketConfig) => {
 					await sock.end('Reload user detail')
 				}，2000);
 			}
+			
 		}
 	})
 
