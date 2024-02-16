@@ -873,6 +873,9 @@ export const downloadMediaMessage = async(
 ) => {
 	try {
 		const result = await downloadMsg()
+		if(ctx) {
+			ctx.logger.info({result})
+		}
 		return result
 	} catch(error) {
 		if(ctx) {
