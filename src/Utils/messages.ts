@@ -706,7 +706,7 @@ export const extractMessageContent = (content: WAMessageContent | undefined | nu
 		} else if(msg.locationMessage) {
 			return { locationMessage: msg.locationMessage }
 		} else if(msg.documentWithCaptionMessage) {
-			return {documentMessage: msg.documentMessage.message.documentMessage}
+			return {documentMessage: msg.documentWithCaptionMessage.message.documentMessage}
 		} else {
 			return {
 				conversation:

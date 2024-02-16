@@ -11230,6 +11230,8 @@ export namespace proto {
             /** ButtonsMessage documentMessage */
             documentMessage?: (proto.Message.IDocumentMessage|null);
 
+            documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
+
             /** ButtonsMessage imageMessage */
             imageMessage?: (proto.Message.IImageMessage|null);
 
@@ -11269,6 +11271,8 @@ export namespace proto {
 
             /** ButtonsMessage documentMessage. */
             public documentMessage?: (proto.Message.IDocumentMessage|null);
+
+            public documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
 
             /** ButtonsMessage imageMessage. */
             public imageMessage?: (proto.Message.IImageMessage|null);
@@ -13012,6 +13016,184 @@ export namespace proto {
              */
             public toJSON(): { [k: string]: any };
         }
+
+        interface IMessageDocumentMessage {
+
+            /** DocumentMessage url */
+            documentMessage?: (proto.IDocumentMessage|null);
+        }
+
+        /** Represents a DocumentMessage. */
+        class MessageDocumentMessage implements IMessageDocumentMessage {
+
+            /**
+             * Constructs a new DocumentMessage.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: proto.Message.IMessageDocumentMessage);
+
+            /** DocumentMessage url. */
+            public documentMessage: proto.DocumentMessage;
+            /**
+             * Creates a new DocumentMessage instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns DocumentMessage instance
+             */
+            public static create(properties?: proto.Message.IMessageDocumentMessage): proto.Message.MessageDocumentMessage;
+
+            /**
+             * Encodes the specified DocumentMessage message. Does not implicitly {@link proto.Message.DocumentMessage.verify|verify} messages.
+             * @param message DocumentMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: proto.Message.IMessageDocumentMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified DocumentMessage message, length delimited. Does not implicitly {@link proto.Message.DocumentMessage.verify|verify} messages.
+             * @param message DocumentMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: proto.Message.IMessageDocumentMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a DocumentMessage message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DocumentMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.Message.MessageDocumentMessage;
+
+            /**
+             * Decodes a DocumentMessage message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns DocumentMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.Message.MessageDocumentMessage;
+
+            /**
+             * Verifies a DocumentMessage message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a DocumentMessage message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns DocumentMessage
+             */
+            public static fromObject(object: { [k: string]: any }): proto.Message.MessageDocumentMessage;
+
+            /**
+             * Creates a plain object from a DocumentMessage message. Also converts values to other types if specified.
+             * @param message DocumentMessage
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: proto.Message.MessageDocumentMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this DocumentMessage to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+        interface IDocumentWithCaptionMessage {
+
+            /** DocumentMessage url */
+            message?: (proto.IMessageDocumentMessage|null);
+        }
+
+        /** Represents a DocumentMessage. */
+        class DocumentWithCaptionMessage implements IDocumentWithCaptionMessage {
+
+            /**
+             * Constructs a new DocumentMessage.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: proto.Message.IDocumentWithCaptionMessage);
+
+            /** DocumentMessage url. */
+            public message: proto.MessageDocumentMessage;
+            /**
+             * Creates a new DocumentMessage instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns DocumentMessage instance
+             */
+            public static create(properties?: proto.Message.IDocumentWithCaptionMessage): proto.Message.DocumentWithCaptionMessage;
+
+            /**
+             * Encodes the specified DocumentMessage message. Does not implicitly {@link proto.Message.DocumentMessage.verify|verify} messages.
+             * @param message DocumentMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: proto.Message.IDocumentWithCaptionMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified DocumentMessage message, length delimited. Does not implicitly {@link proto.Message.DocumentMessage.verify|verify} messages.
+             * @param message DocumentMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: proto.Message.IDocumentWithCaptionMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a DocumentMessage message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DocumentMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.Message.DocumentWithCaptionMessage;
+
+            /**
+             * Decodes a DocumentMessage message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns DocumentMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.Message.DocumentWithCaptionMessage;
+
+            /**
+             * Verifies a DocumentMessage message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a DocumentMessage message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns DocumentMessage
+             */
+            public static fromObject(object: { [k: string]: any }): proto.Message.DocumentWithCaptionMessage;
+
+            /**
+             * Creates a plain object from a DocumentMessage message. Also converts values to other types if specified.
+             * @param message DocumentMessage
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: proto.Message.DocumentWithCaptionMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this DocumentMessage to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
+
 
         /** Properties of an EncCommentMessage. */
         interface IEncCommentMessage {
@@ -16048,6 +16230,8 @@ export namespace proto {
                 /** Header documentMessage */
                 documentMessage?: (proto.Message.IDocumentMessage|null);
 
+                documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
+
                 /** Header imageMessage */
                 imageMessage?: (proto.Message.IImageMessage|null);
 
@@ -16082,6 +16266,8 @@ export namespace proto {
                 /** Header documentMessage. */
                 public documentMessage?: (proto.Message.IDocumentMessage|null);
 
+                public documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
+
                 /** Header imageMessage. */
                 public imageMessage?: (proto.Message.IImageMessage|null);
 
@@ -16095,7 +16281,7 @@ export namespace proto {
                 public locationMessage?: (proto.Message.ILocationMessage|null);
 
                 /** Header media. */
-                public media?: ("documentMessage"|"imageMessage"|"jpegThumbnail"|"videoMessage"|"locationMessage");
+                public media?: ("documentMessage"|"imageMessage"|"jpegThumbnail"|"videoMessage"|"locationMessage"|"documentWithCaptionMessage");
 
                 /**
                  * Creates a new Header instance using the specified properties.
@@ -22827,6 +23013,8 @@ export namespace proto {
                 /** HydratedFourRowTemplate documentMessage */
                 documentMessage?: (proto.Message.IDocumentMessage|null);
 
+                documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
+
                 /** HydratedFourRowTemplate hydratedTitleText */
                 hydratedTitleText?: (string|null);
 
@@ -22866,6 +23054,8 @@ export namespace proto {
 
                 /** HydratedFourRowTemplate documentMessage. */
                 public documentMessage?: (proto.Message.IDocumentMessage|null);
+
+                public documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
 
                 /** HydratedFourRowTemplate hydratedTitleText. */
                 public hydratedTitleText?: (string|null);
