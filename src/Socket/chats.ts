@@ -977,13 +977,6 @@ export const makeChatsSocket = (config: SocketConfig) => {
 				ev.buffer()
 				needToFlushWithAppStateSync = true
 			}
-
-			if(!sock.user.name) {
-				setTimeout(async () => f
-					sock.end('Reload user detail')
-				}，2000);
-			}
-			
 		}
 	})
 
