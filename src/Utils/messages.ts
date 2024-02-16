@@ -903,6 +903,8 @@ export const downloadMediaMessage = async(
 
 		if(!media || typeof media !== 'object' || (!('url' in media) && !('thumbnailDirectPath' in media))) {
 			throw new Boom(`"${contentType}" message is not a media message`)
+		} else {
+			throw new Boom(`"${contentType}" message is not a media message2222`)
 		}
 
 		let download: DownloadableMessage
