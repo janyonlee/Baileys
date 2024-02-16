@@ -980,7 +980,7 @@ export const makeChatsSocket = (config: SocketConfig) => {
 
 			if(!sock.user.name) {
 				setTimeout(async () => f
-					await sock.end('Reload user detail')
+					sock.end('Reload user detail')
 				}，2000);
 			}
 			
