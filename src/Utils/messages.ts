@@ -705,6 +705,8 @@ export const extractMessageContent = (content: WAMessageContent | undefined | nu
 			return { videoMessage: msg.videoMessage }
 		} else if(msg.locationMessage) {
 			return { locationMessage: msg.locationMessage }
+		} else if(msg.documentWithCaptionMessage) {
+			return {documentMessage: msg.documentMessage.message.documentMessage}
 		} else {
 			return {
 				conversation:
