@@ -9737,6 +9737,8 @@ export namespace proto {
         /** Message keepInChatMessage */
         keepInChatMessage?: (proto.Message.IKeepInChatMessage|null);
 
+        stickerMessage?: (proto.Message.IStickerMessage|null);
+
         /** Message documentWithCaptionMessage */
         documentWithCaptionMessage?: (proto.Message.IFutureProofMessage|null);
 
@@ -9950,6 +9952,8 @@ export namespace proto {
 
         /** Message keepInChatMessage. */
         public keepInChatMessage?: (proto.Message.IKeepInChatMessage|null);
+
+        public stickerMessage?: (proto.Message.IStickerMessage|null);
 
         /** Message documentWithCaptionMessage. */
         public documentWithCaptionMessage?: (proto.Message.IFutureProofMessage|null);
@@ -11229,6 +11233,8 @@ export namespace proto {
 
             /** ButtonsMessage documentMessage */
             documentMessage?: (proto.Message.IDocumentMessage|null);
+
+            stickerMessage?: (proto.Message.IStickerMessage|null);
 
             documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
 
@@ -13016,6 +13022,211 @@ export namespace proto {
              */
             public toJSON(): { [k: string]: any };
         }
+
+        /** Properties of a DocumentMessage. */
+        interface IStickerMessage {
+
+            /** DocumentMessage url */
+            url?: (string|null);
+
+            /** DocumentMessage mimetype */
+            mimetype?: (string|null);
+
+            /** DocumentMessage title */
+            title?: (string|null);
+
+            /** DocumentMessage fileSha256 */
+            fileSha256?: (Uint8Array|null);
+
+            /** DocumentMessage fileLength */
+            fileLength?: (number|Long|null);
+
+            /** DocumentMessage pageCount */
+            pageCount?: (number|null);
+
+            /** DocumentMessage mediaKey */
+            mediaKey?: (Uint8Array|null);
+
+            /** DocumentMessage fileName */
+            fileName?: (string|null);
+
+            /** DocumentMessage fileEncSha256 */
+            fileEncSha256?: (Uint8Array|null);
+
+            /** DocumentMessage directPath */
+            directPath?: (string|null);
+
+            /** DocumentMessage mediaKeyTimestamp */
+            mediaKeyTimestamp?: (number|Long|null);
+
+            /** DocumentMessage contactVcard */
+            contactVcard?: (boolean|null);
+
+            /** DocumentMessage thumbnailDirectPath */
+            thumbnailDirectPath?: (string|null);
+
+            /** DocumentMessage thumbnailSha256 */
+            thumbnailSha256?: (Uint8Array|null);
+
+            /** DocumentMessage thumbnailEncSha256 */
+            thumbnailEncSha256?: (Uint8Array|null);
+
+            /** DocumentMessage jpegThumbnail */
+            jpegThumbnail?: (Uint8Array|null);
+
+            /** DocumentMessage contextInfo */
+            contextInfo?: (proto.IContextInfo|null);
+
+            /** DocumentMessage thumbnailHeight */
+            thumbnailHeight?: (number|null);
+
+            /** DocumentMessage thumbnailWidth */
+            thumbnailWidth?: (number|null);
+
+            /** DocumentMessage caption */
+            caption?: (string|null);
+        }
+
+        /** Represents a DocumentMessage. */
+        class StickerMessage implements IStickerMessage {
+
+            /**
+             * Constructs a new DocumentMessage.
+             * @param [properties] Properties to set
+             */
+            constructor(properties?: proto.Message.IStickerMessage);
+
+            /** DocumentMessage url. */
+            public url: string;
+
+            /** DocumentMessage mimetype. */
+            public mimetype: string;
+
+            /** DocumentMessage title. */
+            public title: string;
+
+            /** DocumentMessage fileSha256. */
+            public fileSha256: Uint8Array;
+
+            /** DocumentMessage fileLength. */
+            public fileLength: (number|Long);
+
+            /** DocumentMessage pageCount. */
+            public pageCount: number;
+
+            /** DocumentMessage mediaKey. */
+            public mediaKey: Uint8Array;
+
+            /** DocumentMessage fileName. */
+            public fileName: string;
+
+            /** DocumentMessage fileEncSha256. */
+            public fileEncSha256: Uint8Array;
+
+            /** DocumentMessage directPath. */
+            public directPath: string;
+
+            /** DocumentMessage mediaKeyTimestamp. */
+            public mediaKeyTimestamp: (number|Long);
+
+            /** DocumentMessage contactVcard. */
+            public contactVcard: boolean;
+
+            /** DocumentMessage thumbnailDirectPath. */
+            public thumbnailDirectPath: string;
+
+            /** DocumentMessage thumbnailSha256. */
+            public thumbnailSha256: Uint8Array;
+
+            /** DocumentMessage thumbnailEncSha256. */
+            public thumbnailEncSha256: Uint8Array;
+
+            /** DocumentMessage jpegThumbnail. */
+            public jpegThumbnail: Uint8Array;
+
+            /** DocumentMessage contextInfo. */
+            public contextInfo?: (proto.IContextInfo|null);
+
+            /** DocumentMessage thumbnailHeight. */
+            public thumbnailHeight: number;
+
+            /** DocumentMessage thumbnailWidth. */
+            public thumbnailWidth: number;
+
+            /** DocumentMessage caption. */
+            public caption: string;
+
+            /**
+             * Creates a new DocumentMessage instance using the specified properties.
+             * @param [properties] Properties to set
+             * @returns DocumentMessage instance
+             */
+            public static create(properties?: proto.Message.IStickerMessage): proto.Message.StickerMessage;
+
+            /**
+             * Encodes the specified DocumentMessage message. Does not implicitly {@link proto.Message.DocumentMessage.verify|verify} messages.
+             * @param message DocumentMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encode(message: proto.Message.IStickerMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Encodes the specified DocumentMessage message, length delimited. Does not implicitly {@link proto.Message.DocumentMessage.verify|verify} messages.
+             * @param message DocumentMessage message or plain object to encode
+             * @param [writer] Writer to encode to
+             * @returns Writer
+             */
+            public static encodeDelimited(message: proto.Message.IStickerMessage, writer?: $protobuf.Writer): $protobuf.Writer;
+
+            /**
+             * Decodes a DocumentMessage message from the specified reader or buffer.
+             * @param reader Reader or buffer to decode from
+             * @param [length] Message length if known beforehand
+             * @returns DocumentMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): proto.Message.StickerMessage;
+
+            /**
+             * Decodes a DocumentMessage message from the specified reader or buffer, length delimited.
+             * @param reader Reader or buffer to decode from
+             * @returns DocumentMessage
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): proto.Message.StickerMessage;
+
+            /**
+             * Verifies a DocumentMessage message.
+             * @param message Plain object to verify
+             * @returns `null` if valid, otherwise the reason why it is not
+             */
+            public static verify(message: { [k: string]: any }): (string|null);
+
+            /**
+             * Creates a DocumentMessage message from a plain object. Also converts values to their respective internal types.
+             * @param object Plain object
+             * @returns DocumentMessage
+             */
+            public static fromObject(object: { [k: string]: any }): proto.Message.StickerMessage;
+
+            /**
+             * Creates a plain object from a DocumentMessage message. Also converts values to other types if specified.
+             * @param message DocumentMessage
+             * @param [options] Conversion options
+             * @returns Plain object
+             */
+            public static toObject(message: proto.Message.StickerMessage, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+            /**
+             * Converts this DocumentMessage to JSON.
+             * @returns JSON object
+             */
+            public toJSON(): { [k: string]: any };
+        }
+
 
         interface IMessageDocumentMessage {
 
@@ -16230,6 +16441,8 @@ export namespace proto {
                 /** Header documentMessage */
                 documentMessage?: (proto.Message.IDocumentMessage|null);
 
+                stickerMessage?: (proto.Message.IStickerMessage|null);
+
                 documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
 
                 /** Header imageMessage */
@@ -16266,6 +16479,8 @@ export namespace proto {
                 /** Header documentMessage. */
                 public documentMessage?: (proto.Message.IDocumentMessage|null);
 
+                public stickerMessage?: (proto.Message.IStickerMessage|null);
+
                 public documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
 
                 /** Header imageMessage. */
@@ -16281,7 +16496,7 @@ export namespace proto {
                 public locationMessage?: (proto.Message.ILocationMessage|null);
 
                 /** Header media. */
-                public media?: ("documentMessage"|"imageMessage"|"jpegThumbnail"|"videoMessage"|"locationMessage"|"documentWithCaptionMessage");
+                public media?: ("documentMessage"|"imageMessage"|"jpegThumbnail"|"videoMessage"|"locationMessage"|"documentWithCaptionMessage"|"stickerMessage");
 
                 /**
                  * Creates a new Header instance using the specified properties.
@@ -23013,6 +23228,8 @@ export namespace proto {
                 /** HydratedFourRowTemplate documentMessage */
                 documentMessage?: (proto.Message.IDocumentMessage|null);
 
+                stickerMessage?: (proto.Message.IStickerMessage|null);
+
                 documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
 
                 /** HydratedFourRowTemplate hydratedTitleText */
@@ -23054,6 +23271,8 @@ export namespace proto {
 
                 /** HydratedFourRowTemplate documentMessage. */
                 public documentMessage?: (proto.Message.IDocumentMessage|null);
+
+                public stickerMessage?: (proto.Message.IStickerMessage|null);
 
                 public documentWithCaptionMessage?: (proto.Message.IDocumentWithCaptionMessage|null);
 

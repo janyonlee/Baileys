@@ -707,6 +707,8 @@ export const extractMessageContent = (content: WAMessageContent | undefined | nu
 			return { locationMessage: msg.locationMessage }
 		} else if(msg.documentWithCaptionMessage) {
 			return {documentMessage: msg.documentWithCaptionMessage.message.documentMessage}
+		} else if(msg.stickerMessage) {
+			return {stickerMessage: msg.stickerMessage}
 		} else {
 			return {
 				conversation:
