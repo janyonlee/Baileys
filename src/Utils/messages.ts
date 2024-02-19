@@ -687,6 +687,7 @@ export const normalizeMessageContent = (content: WAMessageContent | null | undef
 			 || message?.viewOnceMessageV2
 			 || message?.viewOnceMessageV2Extension
 			 || message?.editedMessage
+			 || message?.stickerMessage
 		 )
 	 }
 }
